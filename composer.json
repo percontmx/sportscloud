@@ -1,8 +1,22 @@
 {
     "name": "percontmx/sportscloud",
     "version": "1.0.0",
+    "type": "project",
+    "description": "Sports Cloud App",
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Support\\": "tests/_support"
+        }
+    },
     "require": {
         "php": ">=8.3",
-        "codeigniter4/framework": "^4.5"
+        "codeigniter4/framework": "~4.5.0"
+    },
+    "require-dev": {
+        "ext-sqlite3": "*",
+        "phpunit/phpunit": "~10.5"
+    },
+     "scripts": {
+        "test": "phpunit"
     }
 }
