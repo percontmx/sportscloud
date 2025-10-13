@@ -15,3 +15,9 @@
 
 # PHP Composer dependencies:
 /vendor/
+
+# Environment variables file:
+.env
+
+# Writable directories (for example, for file uploads):
+/writable/
