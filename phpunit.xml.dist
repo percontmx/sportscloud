@@ -26,6 +26,9 @@
         <testsuite name="App">
             <directory>./tests</directory>
         </testsuite>
+        <testsuite name="Modules">
+            <directory>./modules/*/tests</directory>
+        </testsuite>
     </testsuites>
     <logging>
         <testdoxHtml outputFile="build/logs/testdox.html"/>
@@ -35,6 +38,7 @@
     <source>
         <include>
             <directory suffix=".php">./app</directory>
+            <directory suffix=".php">./modules/*/src</directory>
         </include>
         <exclude>
             <directory suffix=".php">./app/Views</directory>
@@ -54,5 +58,6 @@
         <env name="database.tests.database" value=":memory:" />
         <env name="database.tests.DBDriver" value="SQLite3" />
         <env name="database.tests.foreignKeys" value="true" />
+        <env name="database.tests.DBPrefix" value="sportscloud_" />
     </php>
 </phpunit>
