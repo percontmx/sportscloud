@@ -3,8 +3,16 @@
     "version": "1.0.0",
     "type": "project",
     "description": "Sports Cloud App",
+    "autoload": {
+        "psr-4": {
+            "Percontmx\\SportsCloud\\Organizations\\": "modules/organizations/src"
+        }
+    },
     "autoload-dev": {
         "psr-4": {
+            "Percontmx\\SportsCloud\\Organizations\\Tests\\": "modules/organizations/tests",
+            "Percontmx\\SportsCloud\\Organizations\\Tests\\Support\\": "modules/organizations/tests/_support",
+            "Tests\\": "tests",
             "Tests\\Support\\": "tests/_support"
         }
     },
