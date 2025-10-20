@@ -11,11 +11,13 @@ class OrganizationsSeeder extends Seeder {
         $factories = [
            [
                 'full_name'    => 'Federación Mexicana de Fútbol Asociación, A.C.',
-                'short_name'   => 'Femexfut'
+                'short_name'   => 'Femexfut',
+                'created_by'   => 'admin'
             ],
             [
                 'full_name'    => 'Magnoliga 7 A.C.',
-                'short_name'   => 'MagnoLiga'
+                'short_name'   => 'MagnoLiga',
+                'created_by'   => 'admin'
            ]
         ];
 

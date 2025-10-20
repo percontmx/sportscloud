@@ -12,7 +12,7 @@ class OrganizationsModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = Organization::class;
     protected $useSoftDeletes   = true;
-    protected $allowedFields    = ['full_name', 'short_name'];
+    protected $allowedFields    = ['full_name', 'short_name', 'created_by'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
