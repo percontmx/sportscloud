@@ -18,6 +18,7 @@ erDiagram
         INT id PK 
         VARCHAR full_name UK 
         VARCHAR short_name UK 
+        VARCHAR created_by
         DATETIME created_at 
         DATETIME updated_at 
         DATETIME deleted_at 
