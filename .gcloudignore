@@ -21,3 +21,5 @@
 
 # Writable directories (for example, for file uploads):
 /writable/
+
+*.db
