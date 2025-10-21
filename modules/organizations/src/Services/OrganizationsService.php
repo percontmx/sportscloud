@@ -16,9 +16,13 @@ class OrganizationsService {
     public function createOrganization(Organization $organization)
     {
         $model = model(OrganizationsModel::class);
-        $model->insert($organization);
-        return $model->find($model->insertID());
-    
+        if($model->insert($organization, true))
+        {
+            return $model->find($model->insertID());
+        }
+
+        $errors = $model->errors();
+        throw new OrganizationsServiceException($errors);
     }
 
 }
