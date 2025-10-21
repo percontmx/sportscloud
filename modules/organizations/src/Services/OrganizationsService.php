@@ -2,6 +2,7 @@
 
 namespace Percontmx\SportsCloud\Organizations\Services;
 
+use Percontmx\SportsCloud\Organizations\Entities\Organization;
 use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
 
 class OrganizationsService {
@@ -10,6 +11,18 @@ class OrganizationsService {
     {
         $model = model(OrganizationsModel::class);
         return $model->find($id);
+    }
+
+    public function createOrganization(Organization $organization)
+    {
+        $model = model(OrganizationsModel::class);
+        if($model->insert($organization, true))
+        {
+            return $model->find($model->insertID());
+        }
+
+        $errors = $model->errors();
+        throw new OrganizationsServiceException($errors);
     }
 
 }
