@@ -25,4 +25,12 @@ class OrganizationsService {
         throw new OrganizationsServiceException($errors);
     }
 
+    public function getListOfOrganizations($withDeleted = false)
+    {
+        // TODO filtrar por usuarios asociados
+        // TODO agregar paginación
+        $model = model(OrganizationsModel::class);
+        return $model->withDeleted($withDeleted)->findAll();
+    }
+
 }
