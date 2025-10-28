@@ -2,10 +2,14 @@
 
 use CodeIgniter\Router\RouteCollection;
 
+use Percontmx\SportsCloud\Organizations\Controllers\CreateOrganizationController;
+use Percontmx\SportsCloud\Organizations\Controllers\GetOrganizationsController;
+
 /**
  * @var RouteCollection $routes
  */
-$routes->group('organizations', ['namespace' => 'Percontmx\SportsCloud\Organizations\Controllers'], 
-    function(RouteCollection $routes) {
-        $routes->get('/', 'GetOrganizationsController::index');
+$routes->group('organizations', static function (RouteCollection $routes) {
+    $routes->get('/', [GetOrganizationsController::class, 'index']);
+    $routes->get('new', [CreateOrganizationController::class, 'loadForm']);
+    $routes->post('/', [CreateOrganizationController::class, 'index']);
 });
