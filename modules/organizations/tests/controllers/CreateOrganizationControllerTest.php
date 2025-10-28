@@ -91,48 +91,4 @@ class CreateOrganizationControllerTest extends CIUnitTestCase
         $result->assertContentType('text/html');
         $result->assertSeeElement('#error');
     }
-
-
-    /*use ControllerTestTrait;
-
-    private $mockService = mock(OrganizationsService::class);
-
-    public function setUp(): void
-    {
-        parent::setUp();
-        // Configuraciones adicionales si es necesario
-        $this->mockService->shouldReceive('createOrganization')
-            ->andReturnUsing(function ($org) {
-                $org->id = 1; // Simula la asignación de un ID
-                return $org;
-            });
-    }
-
-    public function testCreateOrganizationSuccess()
-    {
-        $postData = [
-            'full_name' => 'Test Organization Full Name',
-            'short_name' => 'TestOrg'
-        ];
-
-        $request = new \CodeIgniter\HTTP\IncomingRequest(
-            new \Config\App(),
-    new \CodeIgniter\HTTP\URI('http://example.com'),
-    null,
-    new \CodeIgniter\HTTP\UserAgent(),
-
-        $result = $this->
-
-        /*$result = $this->withRequest(
-            \Config\Services::request(),
-            'post',
-            $postData
-        )->controller(CreateOrganizationController::class)
-         ->execute('index');
-
-        // Aquí puedes agregar aserciones para verificar la respuesta esperada
-        $this->assertStringContainsString('success', $result->getBody());
-    }
-    */
-    
 }
