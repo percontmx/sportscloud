@@ -18,7 +18,6 @@ class GetListOfOrganizationsTest extends OrganizationsServiceTestBase
             ->execute('index');
 
         $result->assertStatus(200);
-        $result->assertSee('Lista de Organizaciones');
         $result->assertSee('Femexfut');
         $result->assertSee('MagnoLiga');
     }

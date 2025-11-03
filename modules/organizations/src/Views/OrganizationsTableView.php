@@ -1,7 +1,9 @@
 <?= $this->extend('layouts/main_layout') ?>
 <?= $this->section('content') ?>
         <div>
-          <a href="/organizations/new" class="btn btn-primary">Nueva</a>
+          <a href="/organizations/new" class="btn btn-primary">
+                <?= lang('Organizations.Actions.New') ?>
+          </a>
         </div>
     
         <table class="table table-striped">
@@ -16,7 +18,7 @@
             <tbody>
             <?php if (!isset($organizations) || empty($organizations)): ?>
                 <tr>
-                    <td colspan="4">No hay organizaciones disponibles.</td>
+                    <td colspan="4"><?= lang('Organizations.Messages.NoOrganizations') ?></td>
                 </tr>
             <?php else: ?>
             <?php foreach ($organizations as $organization): ?>
