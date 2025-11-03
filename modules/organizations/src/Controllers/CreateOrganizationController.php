@@ -3,6 +3,7 @@
 namespace Percontmx\SportsCloud\Organizations\Controllers;
 
 use App\Controllers\BaseController;
+use CodeIgniter\Events\Events;
 use Percontmx\SportsCloud\Organizations\Entities\Organization;
 use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
 
@@ -21,10 +22,13 @@ class CreateOrganizationController extends BaseController
 
     public function index()
     {
-        
-        $data = $this->request->getPost();
+        $data = [
+            'full_name' => $this->request->getPost('full_name'),
+            'short_name' => $this->request->getPost('short_name')
+        ];
+        $this->logger->info('Intentando crear una organización con los siguientes datos: ' . 
+            json_encode($data));
 
-        
         if (!$this->validateData($data, $this->rules)) {
             $errors = $this->validator->getErrors();
             $this->logger->error('Validation errors: ' . json_encode($errors));
@@ -46,6 +50,7 @@ class CreateOrganizationController extends BaseController
         $createdOrg = $organizationsService->createOrganization($newOrg);
 
         $this->logger->info('Organización creada con ID: ' . $createdOrg->id);
+        Events::trigger('organizations.new', $createdOrg);
         // TODO Definir respuesta
         return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm'); 
     }
