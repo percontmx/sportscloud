@@ -28,3 +28,11 @@ erDiagram
 ## Dependencias
 
 Este módulo no depende, al momento, de ningun otro módulo.
+
+## Eventos
+
+Este módulo dispara los siguientes eventos:
+
+| Evento | Disparador | Parámetros |
+|--------| ----- | ---- |
+| `organizations.new` | Al crear una nueva organización. | [Organization](src/Entities/Organization.php) `$newOrg`
