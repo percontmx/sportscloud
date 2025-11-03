@@ -2,7 +2,8 @@
 
 return [
     'Actions' => [
-        'New' => 'Nueva'
+        'New' => 'Nueva',
+        'Create' => 'Crear'
     ],
     'Fields' => [
         'FullName' => 'Nombre completo',
