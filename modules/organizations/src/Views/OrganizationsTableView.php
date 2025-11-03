@@ -7,10 +7,10 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>Nombre Completo</th>
-                <th>Nombre Corto</th>
-                <th>Creado Por</th>
+                <th><?= lang('Organizations.Fields.Id') ?></th>
+                <th><?= lang('Organizations.Fields.FullName') ?></th>
+                <th><?= lang('Organizations.Fields.ShortName') ?></th>
+                <th><?= lang('Organizations.Fields.CreatedBy') ?></th>
             </tr>
             </thead>
             <tbody>
