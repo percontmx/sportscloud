@@ -12,6 +12,7 @@ return [
         'CreatedBy' => 'Creada por'
     ],
     'Messages' => [
-        'NoOrganizations' => 'No hay organizaciones disponibles.'
+        'NoOrganizations' => 'No hay organizaciones disponibles.',
+        'OrganizationData' => 'Datos de la organización',
     ]
 ];

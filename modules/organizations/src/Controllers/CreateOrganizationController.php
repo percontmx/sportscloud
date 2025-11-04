@@ -15,6 +15,8 @@ class CreateOrganizationController extends BaseController
         'short_name' => 'required|string|max_length[100]'
     ];
 
+    protected $helpers = ['form'];
+
     public function loadForm()
     {
         return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm');

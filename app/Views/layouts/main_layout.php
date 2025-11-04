@@ -11,7 +11,9 @@
 
     <body>
         <main role="main">
-            <?= $this->renderSection('content') ?>
+            <div class="container">
+                <?= $this->renderSection('content') ?>
+            </div>
         </main>
     </body>
 </html>
