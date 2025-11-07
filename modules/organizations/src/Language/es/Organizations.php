@@ -14,7 +14,8 @@ return [
     'Messages' => [
         'NoOrganizations' => 'No hay organizaciones disponibles.',
         'OrganizationData' => 'Datos de la organización',
-        'FormErrors' => 'Se encontraron errores en el formulario. Por favor, revíselo e inténtelo de nuevo. '
+        'FormErrors' => 'Se encontraron errores en el formulario. Por favor, revíselo e inténtelo de nuevo.',
+        'OrganizationCreated' => 'La organización {0} ha sido creada con éxito.'
     ],
     'Errors' => [
         'FullNameRequired' => 'El nombre completo es obligatorio.',

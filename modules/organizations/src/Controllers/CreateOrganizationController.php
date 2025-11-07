@@ -60,12 +60,13 @@ class CreateOrganizationController extends BaseController
          * @var OrganizationsService $organizationsService
          */
         $organizationsService = service('organizations');
-        $this->logger->info('Creando organización con datos: ' . json_encode($newOrg->toArray()));
+        $this->logger->info('Saving organization with the following data: ' . json_encode($newOrg->toArray()));
         $createdOrg = $organizationsService->createOrganization($newOrg);
 
-        $this->logger->info('Organización creada con ID: ' . $createdOrg->id);
+        $this->logger->info('New organization created with id: ' . $createdOrg->id);
         Events::trigger('organizations.new', $createdOrg);
-        // TODO Definir respuesta
-        return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm'); 
+        return redirect()->to('/organizations')->with('success', 
+            lang('Organizations.Messages.OrganizationCreated', 
+                [$createdOrg->full_name]));
     }
 }
