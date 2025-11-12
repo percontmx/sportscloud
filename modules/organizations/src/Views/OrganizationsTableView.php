@@ -1,5 +1,15 @@
 <?= $this->extend('layouts/main_layout') ?>
 <?= $this->section('content') ?>
+
+        <?php
+            $flash = session()->getFlashdata('success');
+        ?>
+        <?php if ($flash): ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($flash) ?>
+            </div>
+        <?php endif; ?>
+        
         <div>
           <a href="/organizations/new" class="btn btn-primary">
                 <?= lang('Organizations.Actions.New') ?>

@@ -15,6 +15,21 @@ class CreateOrganizationController extends BaseController
         'short_name' => 'required|string|max_length[100]'
     ];
 
+    private $messages = [
+        'full_name' => [
+            'required' => 'Organizations.Errors.FullNameRequired',
+            'string' => 'Organizations.Errors.FullNameString',
+            'max_length' => 'Organizations.Errors.FullNameMaxLength'
+        ],
+        'short_name' => [
+            'required' => 'Organizations.Errors.ShortNameRequired',
+            'string' => 'Organizations.Errors.ShortNameString',
+            'max_length' => 'Organizations.Errors.ShortNameMaxLength'
+        ]
+    ];
+
+    protected $helpers = ['form'];
+
     public function loadForm()
     {
         return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm');
@@ -26,14 +41,13 @@ class CreateOrganizationController extends BaseController
             'full_name' => $this->request->getPost('full_name'),
             'short_name' => $this->request->getPost('short_name')
         ];
-        $this->logger->info('Intentando crear una organización con los siguientes datos: ' . 
+        $this->logger->info('Creating organization with the following data: ' . 
             json_encode($data));
 
-        if (!$this->validateData($data, $this->rules)) {
+        if (!$this->validateData($data, $this->rules, $this->messages)) {
             $errors = $this->validator->getErrors();
-            $this->logger->error('Validation errors: ' . json_encode($errors));
-            // TODO Definir la respuesta en caso de que las reglas no se cumplan.
-            return view('merga');
+            $this->logger->error('Error found while submitting new organization: ' . json_encode($errors));
+            return redirect()->back()->withInput();
         }
 
         $validData = $this->validator->getValidated();
@@ -46,12 +60,13 @@ class CreateOrganizationController extends BaseController
          * @var OrganizationsService $organizationsService
          */
         $organizationsService = service('organizations');
-        $this->logger->info('Creando organización con datos: ' . json_encode($newOrg->toArray()));
+        $this->logger->info('Saving organization with the following data: ' . json_encode($newOrg->toArray()));
         $createdOrg = $organizationsService->createOrganization($newOrg);
 
-        $this->logger->info('Organización creada con ID: ' . $createdOrg->id);
+        $this->logger->info('New organization created with id: ' . $createdOrg->id);
         Events::trigger('organizations.new', $createdOrg);
-        // TODO Definir respuesta
-        return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm'); 
+        return redirect()->to('/organizations')->with('success', 
+            lang('Organizations.Messages.OrganizationCreated', 
+                [$createdOrg->full_name]));
     }
 }
