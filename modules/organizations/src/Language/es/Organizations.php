@@ -9,7 +9,8 @@ return [
         'FullName' => 'Nombre completo',
         'ShortName' => 'Nombre corto',
         'Id' => 'ID',
-        'CreatedBy' => 'Creada por'
+        'CreatedBy' => 'Creada por',
+        'Actions' => 'Acciones'
     ],
     'Messages' => [
         'NoOrganizations' => 'No hay organizaciones disponibles.',
