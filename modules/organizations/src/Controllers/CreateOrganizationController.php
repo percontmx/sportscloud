@@ -28,13 +28,6 @@ class CreateOrganizationController extends BaseController
         ]
     ];
 
-    protected $helpers = ['form'];
-
-    public function loadForm()
-    {
-        return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm');
-    }
-
     public function index()
     {
         $data = [
