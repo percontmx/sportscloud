@@ -5,23 +5,24 @@ namespace Percontmx\SportsCloud\Organizations\Services;
 use Percontmx\SportsCloud\Organizations\Entities\Organization;
 use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
 
-class OrganizationsService {
-
-    public function getOrganizations($id)  
+class OrganizationsService
+{
+    public function getOrganization(int $organizationId): ?Organization
     {
         $model = model(OrganizationsModel::class);
-        return $model->find($id);
+
+        return $model->find($organizationId);
     }
 
     public function createOrganization(Organization $organization)
     {
         $model = model(OrganizationsModel::class);
-        if($model->insert($organization, true))
-        {
+        if ($model->insert($organization, true)) {
             return $model->find($model->insertID());
         }
 
         $errors = $model->errors();
+
         throw new OrganizationsServiceException($errors);
     }
 
@@ -30,7 +31,7 @@ class OrganizationsService {
         // TODO filtrar por usuarios asociados
         // TODO agregar paginación
         $model = model(OrganizationsModel::class);
+
         return $model->withDeleted($withDeleted)->findAll();
     }
-
 }
