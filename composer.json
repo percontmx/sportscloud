@@ -5,13 +5,16 @@
     "description": "Sports Cloud App",
     "autoload": {
         "psr-4": {
-            "Percontmx\\SportsCloud\\Organizations\\": "modules/organizations/src"
+            "Percontmx\\SportsCloud\\Organizations\\": "modules/organizations/src",
+            "Percontmx\\SportsCloud\\Tournaments\\": "modules/tournaments/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Percontmx\\SportsCloud\\Organizations\\Tests\\": "modules/organizations/tests",
             "Percontmx\\SportsCloud\\Organizations\\Tests\\Support\\": "modules/organizations/tests/_support",
+            "Percontmx\\SportsCloud\\Tournaments\\Tests\\": "modules/tournaments/tests",
+            "Percontmx\\SportsCloud\\Tournaments\\Tests\\Support\\": "modules/tournaments/tests/_support",
             "Tests\\": "tests",
             "Tests\\Support\\": "tests/_support"
         }
