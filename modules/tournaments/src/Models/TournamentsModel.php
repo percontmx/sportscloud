@@ -3,7 +3,7 @@
 namespace Percontmx\SportsCloud\Tournaments\Models;
 
 use CodeIgniter\Model;
-use Percontmx\SportsCloud\Leagues\Entities\Tournament;
+use Percontmx\SportsCloud\Tournaments\Entities\Tournament;
 
 class TournamentsModel extends Model {
     protected $table = 'tournaments';
