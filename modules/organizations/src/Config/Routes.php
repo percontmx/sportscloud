@@ -10,7 +10,12 @@ use Percontmx\SportsCloud\Organizations\Controllers\OrganizationsFormController;
  */
 $routes->group('organizations', static function (RouteCollection $routes) {
     $routes->get('/', [GetOrganizationsController::class, 'index']);
-    $routes->get('(:num)', [OrganizationsFormController::class, 'index']);
+    $routes->group('(:num)', static function (RouteCollection $routes) {
+        $routes->get('', [OrganizationsFormController::class, 'index']);
+        $routes->get('tournaments', static function ($id) {
+            return redirect()->to('tournaments?organizationId=' . $id);
+        });
+    });
     $routes->get('new', [OrganizationsFormController::class, 'index']);
     $routes->post('/', [CreateOrganizationController::class, 'index']);
 });
