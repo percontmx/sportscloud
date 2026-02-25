@@ -19,4 +19,9 @@ class TournamentsService
     {
         return $this->tournamentsModel->find($tournamentId);
     }
+
+    public function getTournaments(bool $withDeleted): array
+    {
+        return $this->tournamentsModel->withDeleted($withDeleted)->findAll();
+    }
 }

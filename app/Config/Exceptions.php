@@ -65,6 +65,7 @@ class Exceptions extends BaseConfig
      * If set to `true`, DEPRECATED errors are only logged and no exceptions are
      * thrown. This option also works for user deprecations.
      */
+
     public bool $logDeprecations = true;
 
     /**
