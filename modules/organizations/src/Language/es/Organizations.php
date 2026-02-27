@@ -14,6 +14,7 @@ return [
         'CreatedBy' => 'Creada por',
         'State'     => 'Estado',
         'Actions'   => 'Acciones',
+        'IncludeDeleted' => 'Incluir inactivas'
     ],
     'Messages' => [
         'NoOrganizations'     => 'No hay organizaciones disponibles.',
