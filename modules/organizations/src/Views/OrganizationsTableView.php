@@ -11,9 +11,13 @@
         <?php endif; ?>
         
         <div>
-          <a href="/organizations/new" class="btn btn-primary">
+            <a href="/organizations/new" class="btn btn-primary">
                 <?= lang('Organizations.Actions.New') ?>
-          </a>
+            </a>
+            <form class="d-flex" role="search" method="get" action="<?= base_url('/organizations') ?>">
+                <label class="form-check-label" for="includeDeleted"><?= lang('Organizations.Fields.IncludeDeleted') ?></label>
+                <input type="checkbox" class="form-check-input ms-2" id="includeDeleted" name="all" value="true" <?= isset($_GET['all']) && $_GET['all'] === 'true' ? 'checked' : '' ?> onclick="this.form.submit()" />
+            </form>
         </div>
     
         <table class="table table-striped">
