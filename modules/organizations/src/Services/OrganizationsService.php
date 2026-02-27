@@ -34,4 +34,14 @@ class OrganizationsService
 
         return $model->withDeleted($withDeleted)->findAll();
     }
+
+    public function deleteOrganization(int $organizationId) 
+    {
+        $model = model(OrganizationsModel::class);
+        if (!$model->delete($organizationId)) {
+            $errors = $model->errors();
+            throw new OrganizationsServiceException($errors);
+        }
+
+    }
 }

@@ -23,6 +23,7 @@
                 <th><?= lang('Organizations.Fields.FullName') ?></th>
                 <th><?= lang('Organizations.Fields.ShortName') ?></th>
                 <th><?= lang('Organizations.Fields.CreatedBy') ?></th>
+                <th><?= lang('Organizations.Fields.State') ?></th>
                 <th><?= lang('Organizations.Fields.Actions') ?></th>
             </tr>
             </thead>
@@ -38,6 +39,13 @@
                 <td><?= esc($organization->full_name) ?></td>
                 <td><?= esc($organization->short_name) ?></td>
                 <td><?= esc($organization->created_by) ?></td>
+                <td>
+                    <?php if ($organization->isActive()): ?>
+                        <span class="badge bg-success">Activo</span>
+                    <?php else: ?>
+                        <span class="badge bg-danger">Inactivo</span>
+                    <?php endif; ?>
+                </td>
                 <td>
                     <a class="btn btn-secondary btn-sm" href="<?= base_url("/organizations/$organization->id") ?>" role="button">
                         <i class="bi bi-search"></i>

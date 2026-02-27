@@ -5,12 +5,14 @@ return [
         'New'    => 'Nueva',
         'Create' => 'Crear',
         'Edit'   => 'Editar',
+        'Disable' => 'Deshabilitar'
     ],
     'Fields' => [
         'FullName'  => 'Nombre completo',
         'ShortName' => 'Nombre corto',
         'Id'        => 'ID',
         'CreatedBy' => 'Creada por',
+        'State'     => 'Estado',
         'Actions'   => 'Acciones',
     ],
     'Messages' => [
@@ -19,6 +21,7 @@ return [
         'FormErrors'          => 'Se encontraron errores en el formulario. Por favor, revíselo e inténtelo de nuevo.',
         'OrganizationCreated' => 'La organización {0} ha sido creada con éxito.',
         'NotFound'            => 'La organización {0} no existe.',
+        'OrganizationDisabled' => 'La organización con ID {0} ha sido deshabilitada.'
     ],
     'Errors' => [
         'FullNameRequired'   => 'El nombre completo es obligatorio.',

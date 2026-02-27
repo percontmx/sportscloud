@@ -48,4 +48,8 @@ $shortNameInvalidClass = isset($errorMessages['short_name']) ? 'is-invalid' : ''
         <?php endif ?>
     <?= form_fieldset_close() ?>
 <?= form_close() ?>
+<?= form_open('', ['method' => 'post']) ?>
+    <?= form_hidden('_method', 'DELETE') ?>
+    <?= form_submit('delete', lang('Organizations.Actions.Disable'), ['class' => 'btn btn-danger']) ?>
+<?= form_close() ?>
 <?= $this->endSection() ?>
