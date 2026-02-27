@@ -18,3 +18,6 @@ The codebase is organized into modules, each responsible for a specific domain o
 - [/public](../public) - Publicly accessible folder containing assets like CSS, JavaScript, and images.
 - [/tests](../tests) - Contains unit and integration tests for the application.
 - [/writable](../writable) - Contains logs, cache, and other writable files.
+
+## Links
+- [List of issues](https://github.com/percontmx/sportscloud/issues)
