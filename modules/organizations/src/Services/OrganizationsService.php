@@ -32,7 +32,10 @@ class OrganizationsService
         // TODO agregar paginación
         $model = model(OrganizationsModel::class);
 
-        return $model->withDeleted($withDeleted)->findAll();
+        if ($withDeleted) {
+            return $model->withDeleted(true)->findAll();
+        }
+        return $model->withDeleted(false)->findAll();
     }
 
     public function deleteOrganization(int $organizationId) 

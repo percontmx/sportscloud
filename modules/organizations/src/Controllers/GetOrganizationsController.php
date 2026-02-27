@@ -15,6 +15,7 @@ class GetOrganizationsController extends BaseController
             FILTER_VALIDATE_BOOLEAN,
             FILTER_NULL_ON_FAILURE
         ) ?? false;
+        $this->logger->info("Getting list of organizations, include deleted: " . ($includeAll ? "yes" : "no"));
 
         /**
          * @var OrganizationsService $service
