@@ -26,9 +26,12 @@
     },
     "require-dev": {
         "ext-sqlite3": "*",
-        "phpunit/phpunit": "~10.5"
+        "phpunit/phpunit": "~10.5",
+        "friendsofphp/php-cs-fixer": "^3.94",
+        "codeigniter/coding-standard": "^1.9"
     },
      "scripts": {
+        "format": "php-cs-fixer fix",
         "test": "phpunit"
     }
 }

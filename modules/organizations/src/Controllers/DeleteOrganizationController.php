@@ -3,8 +3,8 @@
 namespace Percontmx\SportsCloud\Organizations\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
-
+use CodeIgniter\Events\Events;
+use Exception;
 use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
 
 class DeleteOrganizationController extends BaseController
@@ -15,14 +15,18 @@ class DeleteOrganizationController extends BaseController
          * @var OrganizationsService $service
          */
         $service = service('organizations');
+
         try {
             $service->deleteOrganization($organizationId);
-            $this->logger->info("Organization with ID $organizationId has been disabled.");
-            return redirect()->to(base_url('organizations'))->with('success', 
-                lang('Organizations.Messages.OrganizationDisabled', [$organizationId]));
-        } catch (\Exception $e) {
+            $this->logger->info("Organization with ID {$organizationId} has been disabled.");
+            Events::trigger('organizations.disabled', $organizationId);
+            return redirect()->to(base_url('organizations'))->with(
+                'success',
+                lang('Organizations.Messages.OrganizationDisabled', [$organizationId]),
+            );
+        } catch (Exception $e) {
             // Handle error appropriately
-            $this->logger->error("Failed to disable organization with ID $organizationId: " . $e->getMessage());    
+            $this->logger->error("Failed to disable organization with ID {$organizationId}: " . $e->getMessage());
             return redirect()->back()->with('error', 'Failed to delete organization.');
         }
     }
