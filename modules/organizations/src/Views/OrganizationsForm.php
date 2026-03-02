@@ -52,4 +52,9 @@ $shortNameInvalidClass = isset($errorMessages['short_name']) ? 'is-invalid' : ''
     <?= form_hidden('_method', 'DELETE') ?>
     <?= form_submit('delete', lang('Organizations.Actions.Disable'), ['class' => 'btn btn-danger']) ?>
 <?= form_close() ?>
+<hr />
+<?php if (isset($organization->id)) : ?>
+    <?= view_cell('Percontmx\SportsCloud\Organizations\Cells\OrganizationManagersCell',
+        ['organizationId' => $organization->id]) ?>
+<?php endif ?>
 <?= $this->endSection() ?>

@@ -3,6 +3,7 @@
 namespace Percontmx\SportsCloud\Organizations\Services;
 
 use Percontmx\SportsCloud\Organizations\Entities\Organization;
+use Percontmx\SportsCloud\Organizations\Models\OrganizationManagersModel;
 use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
 
 class OrganizationsService
@@ -35,16 +36,24 @@ class OrganizationsService
         if ($withDeleted) {
             return $model->withDeleted(true)->findAll();
         }
+
         return $model->withDeleted(false)->findAll();
     }
 
-    public function deleteOrganization(int $organizationId) 
+    public function deleteOrganization(int $organizationId)
     {
         $model = model(OrganizationsModel::class);
-        if (!$model->delete($organizationId)) {
+        if (! $model->delete($organizationId)) {
             $errors = $model->errors();
+
             throw new OrganizationsServiceException($errors);
         }
+    }
 
+    public function getOrganizationManagers(int $organizationId)
+    {
+        $model = model(OrganizationManagersModel::class);
+
+        return $model->where('organization_id', $organizationId)->findAll();
     }
 }
