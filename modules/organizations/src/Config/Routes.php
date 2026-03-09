@@ -2,9 +2,10 @@
 
 use CodeIgniter\Router\RouteCollection;
 use Percontmx\SportsCloud\Organizations\Controllers\CreateOrganizationController;
+use Percontmx\SportsCloud\Organizations\Controllers\DeleteOrganizationController;
+use Percontmx\SportsCloud\Organizations\Controllers\DeleteOrganizationManagerController;
 use Percontmx\SportsCloud\Organizations\Controllers\GetOrganizationsController;
 use Percontmx\SportsCloud\Organizations\Controllers\OrganizationsFormController;
-use Percontmx\SportsCloud\Organizations\Controllers\DeleteOrganizationController;
 
 /**
  * @var RouteCollection $routes
@@ -13,8 +14,9 @@ $routes->group('organizations', static function (RouteCollection $routes) {
     $routes->get('/', [GetOrganizationsController::class, 'index']);
     $routes->group('(:num)', static function (RouteCollection $routes) {
         $routes->get('', [OrganizationsFormController::class, 'index']);
-        $routes->get('tournaments', static function ($id) {
-            return redirect()->to('tournaments?organizationId=' . $id);
+        $routes->get('tournaments', static fn ($id) => redirect()->to('tournaments?organizationId=' . $id));
+        $routes->group('managers', static function (RouteCollection $routes) {
+            $routes->delete('(:num)', [DeleteOrganizationManagerController::class, 'index']);
         });
         $routes->delete('', [DeleteOrganizationController::class, 'index']);
     });

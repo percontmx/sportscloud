@@ -56,4 +56,18 @@ class OrganizationsService
 
         return $model->where('organization_id', $organizationId)->findAll();
     }
+
+    public function removeManagerFromOrganization(int $organizationId, int $managerId): bool
+    {
+        $model = model(OrganizationManagersModel::class);
+        $manager = $model->where('organization_id', $organizationId)
+            ->where('id', $managerId)
+            ->first();
+
+        if (! $manager) {
+            return false;
+        }
+
+        return $model->delete($manager->id);
+    }
 }
