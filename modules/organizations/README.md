@@ -36,7 +36,7 @@ erDiagram
         DATETIME deleted_at
     }
 
-    o 1 to zero or more om
+    o 1 to zero or more om : administra
 
 ```
 
