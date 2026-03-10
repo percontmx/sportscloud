@@ -7,19 +7,17 @@ use Percontmx\SportsCloud\Organizations\Entities\OrganizationManager;
 
 class OrganizationManagersModel extends Model
 {
-    protected $table            = 'organization_managers';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
-    protected $returnType       = OrganizationManager::class;
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = ['user', 'organization_id'];
-
+    protected $table                  = 'organization_managers';
+    protected $primaryKey             = 'id';
+    protected $useAutoIncrement       = true;
+    protected $returnType             = OrganizationManager::class;
+    protected $useSoftDeletes         = false;
+    protected $protectFields          = true;
+    protected $allowedFields          = ['user', 'organization_id'];
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
-
-    protected array $casts = [];
-    protected array $castHandlers = [];
+    protected array $casts            = [];
+    protected array $castHandlers     = [];
 
     // Dates
     protected $useTimestamps = true;

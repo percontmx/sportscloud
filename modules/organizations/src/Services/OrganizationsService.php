@@ -71,7 +71,7 @@ class OrganizationsService
 
     public function removeManagerFromOrganization(int $organizationId, int $managerId): bool
     {
-        $model = model(OrganizationManagersModel::class);
+        $model   = model(OrganizationManagersModel::class);
         $manager = $model->where('organization_id', $organizationId)
             ->where('id', $managerId)
             ->first();
