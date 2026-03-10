@@ -18,7 +18,7 @@
                         <tr>
                             <td><?= $manager->user ?></td>
                             <td>
-                                <?= form_open("/organizations/{$manager->organizationId}/managers/{$manager->id}", ['method' => 'post']) ?>
+                                <?= form_open("/organizations/{$manager->organization_id}/managers/{$manager->id}", ['method' => 'post']) ?>
                                     <?= form_hidden('_method', 'DELETE') ?>
                                     <?= form_submit('delete', lang('OrganizationManagers.Actions.Remove'), ['class' => 'btn btn-danger']) ?>
                                 <?= form_close() ?>
@@ -27,5 +27,6 @@
                 <?php endif; ?>
             </tbody>
         </table>
+        <?= view_cell('Percontmx\SportsCloud\Organizations\Cells\AddOrganizationManagerFormCell', ['organizationId' => $organizationId]) ?>
     <?php endif; ?>
 </div>

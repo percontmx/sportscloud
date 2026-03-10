@@ -57,6 +57,18 @@ class OrganizationsService
         return $model->where('organization_id', $organizationId)->findAll();
     }
 
+    public function addManager(array $data)
+    {
+        $model = model(OrganizationManagersModel::class);
+        if ($model->insert($data, true)) {
+            return $model->find($model->insertID());
+        }
+
+        $errors = $model->errors();
+
+        throw new OrganizationsServiceException($errors);
+    }
+
     public function removeManagerFromOrganization(int $organizationId, int $managerId): bool
     {
         $model = model(OrganizationManagersModel::class);

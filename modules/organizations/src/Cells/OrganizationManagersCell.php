@@ -18,7 +18,8 @@ class OrganizationManagersCell extends Cell
 
         return $this->view(
             'organization_managers_cell',
-            ['organizationManagers' => $organization],
+            ['organizationManagers' => $organization,
+                'organizationId'    => $this->organizationId],
         );
     }
 }
