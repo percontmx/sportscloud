@@ -3,17 +3,17 @@
 namespace Percontmx\SportsCloud\Organizations\Models;
 
 use CodeIgniter\Model;
-use Percontmx\SportsCloud\Organizations\Entities\OrganizationManagerEntity;
+use Percontmx\SportsCloud\Organizations\Entities\OrganizationManager;
 
 class OrganizationManagersModel extends Model
 {
     protected $table            = 'organization_managers';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
-    protected $returnType       = OrganizationManagerEntity::class;
+    protected $returnType       = OrganizationManager::class;
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['user', 'organization_id'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
