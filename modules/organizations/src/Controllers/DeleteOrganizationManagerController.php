@@ -3,8 +3,10 @@
 namespace Percontmx\SportsCloud\Organizations\Controllers;
 
 use App\Controllers\BaseController;
+use CodeIgniter\Events\Events;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\ResponseInterface;
+use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
 
 class DeleteOrganizationManagerController extends BaseController
 {
@@ -29,6 +31,10 @@ class DeleteOrganizationManagerController extends BaseController
         }
 
         $this->logger->info("Manager with ID {$managerId} removed from organization with ID {$organizationId} successfully");
+        Events::trigger('organizations.manager_removed', [
+            'organization_id' => $organizationId,
+            'manager_id'      => $managerId,
+        ]);
 
         return redirect()->with(
             'message',
