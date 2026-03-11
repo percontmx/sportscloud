@@ -1,6 +1,7 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
+use Percontmx\SportsCloud\Tournaments\Controllers\GetCompetitionEditionsController;
 use Percontmx\SportsCloud\Tournaments\Controllers\GetTournamentInfoController;
 use Percontmx\SportsCloud\Tournaments\Controllers\GetTournamentsController;
 
@@ -9,5 +10,8 @@ use Percontmx\SportsCloud\Tournaments\Controllers\GetTournamentsController;
  */
 $routes->group('tournaments', static function (RouteCollection $routes) {
     $routes->get('', [GetTournamentsController::class, 'index']);
-    $routes->get('(:num)', [GetTournamentInfoController::class, 'index']);
+    $routes->group('(:num)', static function (RouteCollection $routes) {
+        $routes->get('', [GetTournamentInfoController::class, 'index']);
+        $routes->get('editions', [GetCompetitionEditionsController::class, 'index']);
+    });
 });
