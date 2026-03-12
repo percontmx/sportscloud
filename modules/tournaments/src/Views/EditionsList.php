@@ -1,5 +1,5 @@
-<html>
-    <body>
+<?= $this->extend('layouts/main_layout') ?>
+<?= $this->section('content') ?>
 
 <?php if (isset($editions)) : ?>
     <h1>Editions for tournament: <?= $tournament->name ?></h1>
@@ -13,4 +13,4 @@
         </ul>
     <?php endif; ?>
 <?php endif; ?>
-</body></html>
+<?= $this->endSection() ?>
