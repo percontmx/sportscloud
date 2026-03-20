@@ -26,4 +26,11 @@ class EditionsService
     {
         return $this->editionsModel->where('competition_id', $tournamentId)->where('slug', $editionSlug)->first();
     }
+
+    public function createEdition(array $data): Edition
+    {
+        $edition = new Edition($data);
+        $this->editionsModel->save($edition);
+        return $edition;
+    }
 }

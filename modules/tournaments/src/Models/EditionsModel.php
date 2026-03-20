@@ -13,7 +13,7 @@ class EditionsModel extends Model
     protected $returnType             = Edition::class;
     protected $useSoftDeletes         = true;
     protected $protectFields          = true;
-    protected $allowedFields          = ['name', 'start_date', 'end_date'];
+    protected $allowedFields          = ['name', 'start_date', 'end_date', 'competition_id', 'slug'];
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
     protected array $casts            = [];
@@ -34,7 +34,7 @@ class EditionsModel extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
+    protected $beforeInsert   = ['generateSlug'];
     protected $afterInsert    = [];
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
@@ -42,4 +42,12 @@ class EditionsModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    protected function generateSlug(array $data): array
+    {
+        if (isset($data['data']['name'])) {
+            $data['data']['slug'] = url_title($data['data']['name'], '-', true);
+        }
+        return $data;
+    }
 }
