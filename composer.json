@@ -6,15 +6,15 @@
     "autoload": {
         "psr-4": {
             "Percontmx\\SportsVibe\\Organizations\\": "modules/organizations/src",
-            "Percontmx\\SportsVibe\\Tournaments\\": "modules/tournaments/src"
+            "Percontmx\\SportsVibe\\Competitions\\": "modules/competitions/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Percontmx\\SportsVibe\\Organizations\\Tests\\": "modules/organizations/tests",
             "Percontmx\\SportsVibe\\Organizations\\Tests\\Support\\": "modules/organizations/tests/_support",
-            "Percontmx\\SportsVibe\\Tournaments\\Tests\\": "modules/tournaments/tests",
-            "Percontmx\\SportsVibe\\Tournaments\\Tests\\Support\\": "modules/tournaments/tests/_support",
+            "Percontmx\\SportsVibe\\Competitions\\Tests\\": "modules/competitions/tests",
+            "Percontmx\\SportsVibe\\Competitions\\Tests\\Support\\": "modules/competitions/tests/_support",
             "Tests\\": "tests",
             "Tests\\Support\\": "tests/_support"
         }
