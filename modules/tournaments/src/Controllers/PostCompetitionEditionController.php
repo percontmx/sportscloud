@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -32,3 +32,4 @@ class PostCompetitionEditionController extends BaseCompetitionEditionInfoControl
             ->with('tournament', $tournament);    
     }
 }
+

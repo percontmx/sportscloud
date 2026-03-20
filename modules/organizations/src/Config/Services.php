@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Config;
+namespace Percontmx\SportsVibe\Organizations\Config;
 
 use CodeIgniter\Config\BaseService;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class Services extends BaseService
 {
@@ -16,3 +16,4 @@ class Services extends BaseService
         return new OrganizationsService();
     }
 }
+

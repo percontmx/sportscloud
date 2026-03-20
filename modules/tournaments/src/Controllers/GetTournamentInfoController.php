@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -22,8 +22,9 @@ class GetTournamentInfoController extends BaseController
             );
         }
 
-        return view('Percontmx\SportsCloud\Tournaments\Views\TournamentsViewer', [
+        return view('Percontmx\SportsVibe\Tournaments\Views\TournamentsViewer', [
             'tournament' => $tournamentInfo,
         ]);
     }
 }
+

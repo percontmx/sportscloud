@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Models;
+namespace Percontmx\SportsVibe\Tournaments\Models;
 
 use CodeIgniter\Model;
-use Percontmx\SportsCloud\Tournaments\Entities\Tournament;
+use Percontmx\SportsVibe\Tournaments\Entities\Tournament;
 
 class TournamentsModel extends Model {
     protected $table = 'tournaments';
@@ -19,3 +19,4 @@ class TournamentsModel extends Model {
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
 }
+

@@ -4,7 +4,7 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
-use Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds\CompetitionEditionsTestDataSeeder;
+use Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds\CompetitionEditionsTestDataSeeder;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
@@ -16,7 +16,7 @@ final class GetCompetitionEditionInfoTest extends CIUnitTestCase
     use FeatureTestTrait;
 
     protected $migrate   = true;
-    protected $namespace = 'Percontmx\SportsCloud\Tournaments';
+    protected $namespace = 'Percontmx\SportsVibe\Tournaments';
     protected $seed      = CompetitionEditionsTestDataSeeder::class;
 
     protected function setUp(): void
@@ -41,3 +41,4 @@ final class GetCompetitionEditionInfoTest extends CIUnitTestCase
         $this->get('/tournaments/1/editions/non-existent-edition');
     }
 }
+

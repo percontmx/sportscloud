@@ -1,8 +1,8 @@
-# SportsCloud - Módulo de Organizaciones.
+# SportsVibe - Módulo de Organizaciones.
 
 ## Namespace
 
-**Percontmx\SportsCloud\Organizations**
+**Percontmx\SportsVibe\Organizations**
 
 ## Descripción
 
@@ -54,3 +54,4 @@ Este módulo dispara los siguientes eventos:
 | `organizations.disable` | Al desabilitar a una organización. | INT `$organizationId` |
 | `organizations.manager_added` | Al agregar un administrador | ARRAY `$data` |
 | `organizations.manager_removed` | Al deshabilitar un administrador | INT `$organizationId`, STRING `$user` |
+

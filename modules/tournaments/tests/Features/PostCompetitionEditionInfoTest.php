@@ -3,7 +3,7 @@
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
-use Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds\CompetitionEditionsTestDataSeeder;
+use Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds\CompetitionEditionsTestDataSeeder;
 use PHPUnit\Framework\Attributes\Test;
 
 class PostCompetitionEditionInfoTest extends CIUnitTestCase
@@ -12,7 +12,7 @@ class PostCompetitionEditionInfoTest extends CIUnitTestCase
     use FeatureTestTrait;
 
     protected $migrate   = true;
-    protected $namespace = 'Percontmx\SportsCloud\Tournaments';
+    protected $namespace = 'Percontmx\SportsVibe\Tournaments';
     protected $seed      = CompetitionEditionsTestDataSeeder::class;
 
     #[Test]

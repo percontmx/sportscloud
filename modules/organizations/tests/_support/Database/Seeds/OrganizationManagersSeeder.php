@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Tests\Support\Database\Seeds;
+namespace Percontmx\SportsVibe\Organizations\Tests\Support\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
@@ -25,3 +25,4 @@ class OrganizationManagersSeeder extends Seeder
         }
     }
 }
+

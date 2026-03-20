@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Services;
+namespace Percontmx\SportsVibe\Tournaments\Services;
 
-use Percontmx\SportsCloud\Tournaments\Entities\Tournament;
-use Percontmx\SportsCloud\Tournaments\Models\TournamentsModel;
+use Percontmx\SportsVibe\Tournaments\Entities\Tournament;
+use Percontmx\SportsVibe\Tournaments\Models\TournamentsModel;
 
 class TournamentsService
 {
@@ -25,3 +25,4 @@ class TournamentsService
         return $this->tournamentsModel->withDeleted($withDeleted)->findAll();
     }
 }
+

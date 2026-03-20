@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <title>SportsCloud</title>
+    <title>SportsVibe</title>
 
     <body>
         <main role="main">

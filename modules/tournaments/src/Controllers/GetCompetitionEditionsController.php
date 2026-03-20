@@ -1,11 +1,11 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Exceptions\PageNotFoundException;
-use Percontmx\SportsCloud\Tournaments\Services\EditionsService;
-use Percontmx\SportsCloud\Tournaments\Services\TournamentService;
+use Percontmx\SportsVibe\Tournaments\Services\EditionsService;
+use Percontmx\SportsVibe\Tournaments\Services\TournamentService;
 
 class GetCompetitionEditionsController extends BaseController
 {
@@ -27,8 +27,9 @@ class GetCompetitionEditionsController extends BaseController
         $tournamentEditions = $editionsService->getEditionsByTournamentId($tournament->id);
 
         return view(
-            'Percontmx\SportsCloud\Tournaments\Views\EditionsList',
+            'Percontmx\SportsVibe\Tournaments\Views\EditionsList',
             ['editions' => $tournamentEditions, 'tournament' => $tournament],
         );
     }
 }
+

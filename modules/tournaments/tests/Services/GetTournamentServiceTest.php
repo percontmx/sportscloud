@@ -1,12 +1,12 @@
 <?php 
 
-namespace Percontmx\SportsCloud\Tournaments\Tests;
+namespace Percontmx\SportsVibe\Tournaments\Tests;
 
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use PHPUnit\Framework\Attributes\Test;
 
-use Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder;
+use Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder;
 
 class GetTournamentServiceTest extends CIUnitTestCase
 {
@@ -15,7 +15,7 @@ class GetTournamentServiceTest extends CIUnitTestCase
 
     protected $service;
     protected $migrate = true;
-    protected $namespace   = 'Percontmx\SportsCloud\Tournaments';
+    protected $namespace   = 'Percontmx\SportsVibe\Tournaments';
     protected $seed = TournamentTestDataSeeder::class;
     
     protected function setUp(): void 
@@ -39,3 +39,4 @@ class GetTournamentServiceTest extends CIUnitTestCase
         $this->assertNull($tournament);
     }   
 }
+

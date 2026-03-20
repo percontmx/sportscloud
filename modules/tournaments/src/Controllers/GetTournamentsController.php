@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
@@ -11,8 +11,9 @@ class GetTournamentsController extends BaseController
     {
         $service = service('tournaments');
         $tournaments = $service->getTournaments(true);
-        return view('Percontmx\SportsCloud\Tournaments\Views\TournamentsList', [
+        return view('Percontmx\SportsVibe\Tournaments\Views\TournamentsList', [
             'tournaments' => $tournaments,
         ]);
     }
 }
+

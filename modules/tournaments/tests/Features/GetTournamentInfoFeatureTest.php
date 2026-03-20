@@ -1,19 +1,19 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Tests;
+namespace Percontmx\SportsVibe\Tournaments\Tests;
 
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\FeatureTestTrait;
 use CodeIgniter\Test\DatabaseTestTrait;
 
-use Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder;
+use Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder;
 
 class GetTournamentInfoFeatureTest extends CIUnitTestCase
 {
     use FeatureTestTrait, DatabaseTestTrait;
 
     protected $migrate = true;
-    protected $namespace = 'Percontmx\SportsCloud\Tournaments';
+    protected $namespace = 'Percontmx\SportsVibe\Tournaments';
     protected $seed = TournamentTestDataSeeder::class;
 
     public function testTournamentViewDisplaysData()
@@ -30,3 +30,4 @@ class GetTournamentInfoFeatureTest extends CIUnitTestCase
         $this->get('/tournaments/2');
     }
 }
+

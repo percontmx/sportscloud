@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Services;
+namespace Percontmx\SportsVibe\Tournaments\Services;
 
-use Percontmx\SportsCloud\Tournaments\Entities\Edition;
-use Percontmx\SportsCloud\Tournaments\Models\EditionsModel;
+use Percontmx\SportsVibe\Tournaments\Entities\Edition;
+use Percontmx\SportsVibe\Tournaments\Models\EditionsModel;
 
 class EditionsService
 {
@@ -34,3 +34,4 @@ class EditionsService
         return $edition;
     }
 }
+

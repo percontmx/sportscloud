@@ -33,3 +33,4 @@ return [
         'ShortNameMaxLength' => 'El nombre corto no puede tener más de 100 caracteres.',
     ],
 ];
+

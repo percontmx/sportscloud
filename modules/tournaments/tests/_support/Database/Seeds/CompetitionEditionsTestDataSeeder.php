@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds;
+namespace Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
@@ -8,7 +8,7 @@ class CompetitionEditionsTestDataSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call('Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder');
+        $this->call('Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds\TournamentTestDataSeeder');
         $editions = [
             [
                 'name'           => 'Apertura 2025',
@@ -33,3 +33,4 @@ class CompetitionEditionsTestDataSeeder extends Seeder
         }
     }
 }
+

@@ -1,10 +1,10 @@
-# SportsCloud - Instructions for GitHub Copilot
+# SportsVibe - Instructions for GitHub Copilot
 
 ## Description
-This file contains instructions for GitHub Copilot to assist in code generation and suggestions for the SportsCloud project. The instructions are designed to ensure that the generated code adheres to the project's coding standards and practices.
+This file contains instructions for GitHub Copilot to assist in code generation and suggestions for the SportsVibe project. The instructions are designed to ensure that the generated code adheres to the project's coding standards and practices.
 
 ## The project
-SportsCloud is a web application intended to manage sports organizations, including leagues, teams, players, and matches. 
+SportsVibe is a web application intended to manage sports organizations, including leagues, teams, players, and matches. 
 
 The project is built using PHP 8.3 and CodeIgniter4 framework, following a modular monolithic architecture. 
 
@@ -20,4 +20,4 @@ The codebase is organized into modules, each responsible for a specific domain o
 - [/writable](../writable) - Contains logs, cache, and other writable files.
 
 ## Links
-- [List of issues](https://github.com/percontmx/sportscloud/issues)
+- [List of issues](https://github.com/percontmx/sportsvibe/issues)

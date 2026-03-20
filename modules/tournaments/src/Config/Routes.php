@@ -1,11 +1,11 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
-use Percontmx\SportsCloud\Tournaments\Controllers\GetCompetitionEditionInfoController;
-use Percontmx\SportsCloud\Tournaments\Controllers\GetCompetitionEditionsController;
-use Percontmx\SportsCloud\Tournaments\Controllers\GetTournamentInfoController;
-use Percontmx\SportsCloud\Tournaments\Controllers\GetTournamentsController;
-use Percontmx\SportsCloud\Tournaments\Controllers\PostCompetitionEditionController;
+use Percontmx\SportsVibe\Tournaments\Controllers\GetCompetitionEditionInfoController;
+use Percontmx\SportsVibe\Tournaments\Controllers\GetCompetitionEditionsController;
+use Percontmx\SportsVibe\Tournaments\Controllers\GetTournamentInfoController;
+use Percontmx\SportsVibe\Tournaments\Controllers\GetTournamentsController;
+use Percontmx\SportsVibe\Tournaments\Controllers\PostCompetitionEditionController;
 
 /**
  * @var RouteCollection $routes
@@ -21,3 +21,4 @@ $routes->group('tournaments', static function (RouteCollection $routes) {
         });
     });
 });
+

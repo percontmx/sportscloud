@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 class GetCompetitionEditionInfoController extends BaseCompetitionEditionInfoController
 {
@@ -10,8 +10,9 @@ class GetCompetitionEditionInfoController extends BaseCompetitionEditionInfoCont
         $edition    = $this->getCompetitionEditionInfo($tournament, $editionSlug);
 
         return view(
-            'Percontmx\SportsCloud\Tournaments\Views\EditionView',
+            'Percontmx\SportsVibe\Tournaments\Views\EditionView',
             ['edition' => $edition, 'tournament' => $tournament],
         );
     }
 }
+

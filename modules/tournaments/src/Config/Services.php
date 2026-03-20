@@ -1,10 +1,10 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Config;
+namespace Percontmx\SportsVibe\Tournaments\Config;
 
 use CodeIgniter\Config\BaseService;
-use Percontmx\SportsCloud\Tournaments\Services\EditionsService;
-use Percontmx\SportsCloud\Tournaments\Services\TournamentsService;
+use Percontmx\SportsVibe\Tournaments\Services\EditionsService;
+use Percontmx\SportsVibe\Tournaments\Services\TournamentsService;
 
 class Services extends BaseService
 {
@@ -26,3 +26,4 @@ class Services extends BaseService
         return new EditionsService();
     }
 }
+

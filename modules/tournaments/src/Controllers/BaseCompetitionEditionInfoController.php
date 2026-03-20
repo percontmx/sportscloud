@@ -1,13 +1,13 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Controllers;
+namespace Percontmx\SportsVibe\Tournaments\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Exceptions\PageNotFoundException;
-use Percontmx\SportsCloud\Tournaments\Entities\Edition;
-use Percontmx\SportsCloud\Tournaments\Entities\Tournament;
-use Percontmx\SportsCloud\Tournaments\Services\EditionsService;
-use Percontmx\SportsCloud\Tournaments\Services\TournamentsService;
+use Percontmx\SportsVibe\Tournaments\Entities\Edition;
+use Percontmx\SportsVibe\Tournaments\Entities\Tournament;
+use Percontmx\SportsVibe\Tournaments\Services\EditionsService;
+use Percontmx\SportsVibe\Tournaments\Services\TournamentsService;
 
 abstract class BaseCompetitionEditionInfoController extends BaseController
 {
@@ -43,3 +43,4 @@ abstract class BaseCompetitionEditionInfoController extends BaseController
         return $edition;
     }
 }
+

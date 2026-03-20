@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Models;
+namespace Percontmx\SportsVibe\Organizations\Models;
 
 use CodeIgniter\Model;
-use Percontmx\SportsCloud\Organizations\Entities\OrganizationManager;
+use Percontmx\SportsVibe\Organizations\Entities\OrganizationManager;
 
 class OrganizationManagersModel extends Model
 {
@@ -43,3 +43,4 @@ class OrganizationManagersModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 }
+

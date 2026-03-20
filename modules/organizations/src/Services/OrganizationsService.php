@@ -1,10 +1,10 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Services;
+namespace Percontmx\SportsVibe\Organizations\Services;
 
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
-use Percontmx\SportsCloud\Organizations\Models\OrganizationManagersModel;
-use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Models\OrganizationManagersModel;
+use Percontmx\SportsVibe\Organizations\Models\OrganizationsModel;
 
 class OrganizationsService
 {
@@ -83,3 +83,4 @@ class OrganizationsService
         return $model->delete($manager->id);
     }
 }
+

@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Entities;
+namespace Percontmx\SportsVibe\Tournaments\Entities;
 
 use CodeIgniter\Entity\Entity;
 
@@ -15,3 +15,4 @@ class Tournament extends Entity
         return $this->deleted_at === null;
     }
 }
+

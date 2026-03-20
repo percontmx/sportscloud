@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Services;
+namespace Percontmx\SportsVibe\Organizations\Services;
 
 use Exception;
 
@@ -26,3 +26,4 @@ class OrganizationsServiceException extends Exception
     }
 
 }
+

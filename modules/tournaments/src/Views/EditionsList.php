@@ -6,7 +6,7 @@
 <div class="modal" id="newEditionModal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <?= view_cell('Percontmx\SportsCloud\Tournaments\Cells\CompetitionEditionViewerCell', ['tournamentId' => $tournament->id]) ?>
+            <?= view_cell('Percontmx\SportsVibe\Tournaments\Cells\CompetitionEditionViewerCell', ['tournamentId' => $tournament->id]) ?>
         </div>
     </div>
 </div>
@@ -24,3 +24,4 @@
     <?php endif; ?>
 <?php endif; ?>
 <?= $this->endSection() ?>
+

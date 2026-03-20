@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Database\Migrations;
+namespace Percontmx\SportsVibe\Tournaments\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -57,3 +57,4 @@ class EditionsTableMigration extends Migration
         $this->forge->dropTable('editions');
     }
 }
+

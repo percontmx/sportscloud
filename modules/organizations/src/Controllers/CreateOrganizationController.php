@@ -1,11 +1,11 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Events\Events;
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class CreateOrganizationController extends BaseController
 {
@@ -63,3 +63,4 @@ class CreateOrganizationController extends BaseController
                 [$createdOrg->full_name]));
     }
 }
+

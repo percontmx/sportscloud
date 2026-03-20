@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Models;
+namespace Percontmx\SportsVibe\Tournaments\Models;
 
 use CodeIgniter\Model;
-use Percontmx\SportsCloud\Tournaments\Entities\Edition;
+use Percontmx\SportsVibe\Tournaments\Entities\Edition;
 
 class EditionsModel extends Model
 {
@@ -51,3 +51,4 @@ class EditionsModel extends Model
         return $data;
     }
 }
+

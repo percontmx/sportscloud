@@ -1,10 +1,10 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Events\Events;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class CreateOrganizationManagerController extends BaseController
 {
@@ -28,3 +28,4 @@ class CreateOrganizationManagerController extends BaseController
         return redirect()->to(base_url("organizations/{$organizationId}"))->with('success', lang('OrganizationManagers.Messages.ManagerAdded'));
     }
 }
+

@@ -4,3 +4,4 @@
 <p>Nombre: <?= $tournament->name ?></p>
 <p>Estado: <?= $tournament->deleted_at ? 'Inactivo' : 'Activo' ?></p>
 <?= $this->endSection() ?>
+

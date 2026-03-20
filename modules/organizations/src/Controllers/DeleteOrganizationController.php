@@ -1,11 +1,11 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Events\Events;
 use Exception;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class DeleteOrganizationController extends BaseController
 {
@@ -31,3 +31,4 @@ class DeleteOrganizationController extends BaseController
         }
     }
 }
+

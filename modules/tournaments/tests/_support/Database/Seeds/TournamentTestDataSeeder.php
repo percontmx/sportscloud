@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Tournaments\Tests\Support\Database\Seeds;
+namespace Percontmx\SportsVibe\Tournaments\Tests\Support\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
 
@@ -26,3 +26,4 @@ class TournamentTestDataSeeder extends Seeder
         }
     }
 }
+
