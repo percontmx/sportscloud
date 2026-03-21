@@ -2,9 +2,9 @@
 <?= $this->section('content') ?>
 <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1>Ligas y torneos</h1>
+        <h1>Competiciones</h1>
         <a href="<?= base_url('competitions/create') ?>" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Nuevo Torneo
+            <i class="fas fa-plus"></i> Nueva competición
         </a>
     </div>
 
@@ -20,7 +20,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($tournaments as $t): ?>
+                    <?php if (empty($competitions)): ?>
+                        <tr>
+                            <td colspan="4" class="text-center py-4">
+                                No hay competiciones disponibles
+                            </td>
+                        </tr>
+                    <?php else: ?>
+                    <?php foreach ($competitions as $t): ?>
                         <tr>
                             <td>
                                 <strong><?= $t->name ?></strong>
@@ -34,7 +41,7 @@
                                 </span>
                             </td>
                             <td class="text-end">
-                                <a href="<?= base_url("tournaments/{$t->id}") ?>" class="btn btn-sm btn-outline-info">
+                                <a href="<?= base_url("competitions/{$t->id}") ?>" class="btn btn-sm btn-outline-info">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 <button class="btn btn-sm btn-outline-danger">
@@ -43,6 +50,7 @@
                             </td>
                         </tr>
                     <?php endforeach; ?>
+                    <?php endif; ?>
                 </tbody>
             </table>
         </div>
