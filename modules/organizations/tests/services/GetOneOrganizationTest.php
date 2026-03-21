@@ -1,6 +1,6 @@
 <?php
 
-use Percontmx\SportsCloud\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
+use Percontmx\SportsVibe\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
@@ -34,3 +34,4 @@ final class GetOneOrganizationTest extends OrganizationsServiceTestBase
         $this->assertNull($organization);
     }
 }
+

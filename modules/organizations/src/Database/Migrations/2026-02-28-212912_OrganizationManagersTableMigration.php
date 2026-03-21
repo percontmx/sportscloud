@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Database\Migrations;
+namespace Percontmx\SportsVibe\Organizations\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -49,3 +49,4 @@ class OrganizationManagersTableMigration extends Migration
         $this->forge->dropTable('organization_managers');
     }
 }
+

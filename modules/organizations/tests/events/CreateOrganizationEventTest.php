@@ -4,7 +4,7 @@ use CodeIgniter\Events\Events;
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
 use PHPUnit\Framework\Attributes\Test;
 
 class CreateOrganizationEventTest extends CIUnitTestCase
@@ -14,7 +14,7 @@ class CreateOrganizationEventTest extends CIUnitTestCase
     use FeatureTestTrait;
 
     protected $refresh = true;
-    protected $namespace = 'Percontmx\SportsCloud\Organizations';
+    protected $namespace = 'Percontmx\SportsVibe\Organizations';
     protected $migrate = true;
     protected $migrateOnce = false;
 
@@ -50,3 +50,4 @@ class CreateOrganizationEventTest extends CIUnitTestCase
         $response->assertOK();
     }
 }
+

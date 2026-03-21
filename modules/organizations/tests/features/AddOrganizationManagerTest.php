@@ -3,7 +3,7 @@
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\DatabaseTestTrait;
 use CodeIgniter\Test\FeatureTestTrait;
-use Percontmx\SportsCloud\Organizations\Tests\Support\Database\Seeds\OrganizationManagersSeeder;
+use Percontmx\SportsVibe\Organizations\Tests\Support\Database\Seeds\OrganizationManagersSeeder;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
@@ -15,7 +15,7 @@ final class AddOrganizationManagerTest extends CIUnitTestCase
     use FeatureTestTrait;
 
     protected $refresh     = true;
-    protected $namespace   = 'Percontmx\SportsCloud\Organizations';
+    protected $namespace   = 'Percontmx\SportsVibe\Organizations';
     protected $migrate     = true;
     protected $migrateOnce = false;
     protected $seed        = OrganizationManagersSeeder::class;
@@ -44,3 +44,4 @@ final class AddOrganizationManagerTest extends CIUnitTestCase
         ]);
     }
 }
+

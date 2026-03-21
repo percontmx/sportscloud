@@ -3,9 +3,9 @@
 use CodeIgniter\Test\CIUnitTestCase;
 use CodeIgniter\Test\ControllerTestTrait;
 use Config\Services;
-use Percontmx\SportsCloud\Organizations\Controllers\OrganizationsFormController;
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Controllers\OrganizationsFormController;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
@@ -81,3 +81,4 @@ final class OrganizationsFormControllerTest extends CIUnitTestCase
         $result->assertStatus(404);
     }
 }
+

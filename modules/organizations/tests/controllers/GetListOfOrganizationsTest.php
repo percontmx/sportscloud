@@ -2,9 +2,9 @@
 
 use CodeIgniter\Test\ControllerTestTrait;
 use PHPUnit\Framework\Attributes\Test;
-use Percontmx\SportsCloud\Organizations\Controllers\GetOrganizationsController;
-use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
-use Percontmx\SportsCloud\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
+use Percontmx\SportsVibe\Organizations\Controllers\GetOrganizationsController;
+use Percontmx\SportsVibe\Organizations\Models\OrganizationsModel;
+use Percontmx\SportsVibe\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
 
 class GetListOfOrganizationsTest extends OrganizationsServiceTestBase
 {
@@ -35,3 +35,4 @@ class GetListOfOrganizationsTest extends OrganizationsServiceTestBase
         $result->assertSee('No hay organizaciones disponibles');       
     }
 }
+

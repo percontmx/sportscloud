@@ -1,8 +1,8 @@
 <?php
 
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
-use Percontmx\SportsCloud\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsServiceException;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsServiceException;
 
 use PHPUnit\Framework\Attributes\Test;
 
@@ -53,3 +53,4 @@ class CreateOrganizationServiceTest extends OrganizationsServiceTestBase
         $this->fail();  
     }   
 }
+

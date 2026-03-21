@@ -1,9 +1,9 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Tests\Services;
+namespace Percontmx\SportsVibe\Organizations\Tests\Services;
 
-use Percontmx\SportsCloud\Organizations\Models\OrganizationsModel;
-use Percontmx\SportsCloud\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
+use Percontmx\SportsVibe\Organizations\Models\OrganizationsModel;
+use Percontmx\SportsVibe\Organizations\Tests\Support\Services\OrganizationsServiceTestBase;
 use PHPUnit\Framework\Attributes\Test;
 
 /**
@@ -43,3 +43,4 @@ final class GetOrganizationsServiceTest extends OrganizationsServiceTestBase
         $this->assertCount(2, $organizations);
     }
 }
+

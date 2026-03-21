@@ -1,20 +1,20 @@
 {
-    "name": "percontmx/sportscloud",
+    "name": "percontmx/sportsvibe",
     "version": "1.0.0",
     "type": "project",
-    "description": "Sports Cloud App",
+    "description": "Sports Vibe App",
     "autoload": {
         "psr-4": {
-            "Percontmx\\SportsCloud\\Organizations\\": "modules/organizations/src",
-            "Percontmx\\SportsCloud\\Tournaments\\": "modules/tournaments/src"
+            "Percontmx\\SportsVibe\\Organizations\\": "modules/organizations/src",
+            "Percontmx\\SportsVibe\\Competitions\\": "modules/competitions/src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Percontmx\\SportsCloud\\Organizations\\Tests\\": "modules/organizations/tests",
-            "Percontmx\\SportsCloud\\Organizations\\Tests\\Support\\": "modules/organizations/tests/_support",
-            "Percontmx\\SportsCloud\\Tournaments\\Tests\\": "modules/tournaments/tests",
-            "Percontmx\\SportsCloud\\Tournaments\\Tests\\Support\\": "modules/tournaments/tests/_support",
+            "Percontmx\\SportsVibe\\Organizations\\Tests\\": "modules/organizations/tests",
+            "Percontmx\\SportsVibe\\Organizations\\Tests\\Support\\": "modules/organizations/tests/_support",
+            "Percontmx\\SportsVibe\\Competitions\\Tests\\": "modules/competitions/tests",
+            "Percontmx\\SportsVibe\\Competitions\\Tests\\Support\\": "modules/competitions/tests/_support",
             "Tests\\": "tests",
             "Tests\\Support\\": "tests/_support"
         }

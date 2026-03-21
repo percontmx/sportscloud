@@ -1,10 +1,10 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class GetOrganizationsController extends BaseController
 {
@@ -23,9 +23,10 @@ class GetOrganizationsController extends BaseController
         $service = service('organizations');
         $organizations = $service->getListOfOrganizations($includeAll);
         
-        return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsTableView.php', [
+        return view('Percontmx\SportsVibe\Organizations\Views\OrganizationsTableView.php', [
             'organizations' => $organizations,
         ]);
         
     }
 }
+

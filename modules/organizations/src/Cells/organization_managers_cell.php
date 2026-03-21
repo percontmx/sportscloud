@@ -27,6 +27,7 @@
                 <?php endif; ?>
             </tbody>
         </table>
-        <?= view_cell('Percontmx\SportsCloud\Organizations\Cells\AddOrganizationManagerFormCell', ['organizationId' => $organizationId]) ?>
+        <?= view_cell('Percontmx\SportsVibe\Organizations\Cells\AddOrganizationManagerFormCell', ['organizationId' => $organizationId]) ?>
     <?php endif; ?>
 </div>
+

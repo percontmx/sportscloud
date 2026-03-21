@@ -1,6 +1,6 @@
 <?php
 
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
 
 $formAction = '/organizations';
 
@@ -54,7 +54,8 @@ $shortNameInvalidClass = isset($errorMessages['short_name']) ? 'is-invalid' : ''
 <?= form_close() ?>
 <hr />
 <?php if (isset($organization->id)) : ?>
-    <?= view_cell('Percontmx\SportsCloud\Organizations\Cells\OrganizationManagersCell',
+    <?= view_cell('Percontmx\SportsVibe\Organizations\Cells\OrganizationManagersCell',
         ['organizationId' => $organization->id]) ?>
 <?php endif ?>
 <?= $this->endSection() ?>
+

@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Exceptions\PageNotFoundException;
@@ -12,7 +12,7 @@ class OrganizationsFormController extends BaseController
     public function index(?int $organizationId = null)
     {
         if (! $organizationId) {
-            return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm');
+            return view('Percontmx\SportsVibe\Organizations\Views\OrganizationsForm');
         }
 
         /**
@@ -22,7 +22,7 @@ class OrganizationsFormController extends BaseController
         $organization = $service->getOrganization($organizationId);
 
         if ($organization) {
-            return view('Percontmx\SportsCloud\Organizations\Views\OrganizationsForm', [
+            return view('Percontmx\SportsVibe\Organizations\Views\OrganizationsForm', [
                 'organization' => $organization,
             ]);
         }
@@ -30,3 +30,4 @@ class OrganizationsFormController extends BaseController
         throw new PageNotFoundException(lang('Organizations.Messages.NotFound', [$organizationId]));
     }
 }
+

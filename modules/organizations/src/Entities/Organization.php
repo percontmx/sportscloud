@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Entities;
+namespace Percontmx\SportsVibe\Organizations\Entities;
 
 use CodeIgniter\Entity\Entity;
 
@@ -13,3 +13,4 @@ class Organization extends Entity
         return $this->deleted_at === null;
     }
 }
+

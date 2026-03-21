@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Cells;
+namespace Percontmx\SportsVibe\Organizations\Cells;
 
 use CodeIgniter\View\Cells\Cell;
 
@@ -23,3 +23,4 @@ class OrganizationManagersCell extends Cell
         );
     }
 }
+

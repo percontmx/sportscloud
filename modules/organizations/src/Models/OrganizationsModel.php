@@ -1,8 +1,8 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Models;
+namespace Percontmx\SportsVibe\Organizations\Models;
 
-use Percontmx\SportsCloud\Organizations\Entities\Organization;
+use Percontmx\SportsVibe\Organizations\Entities\Organization;
 use CodeIgniter\Model;
 
 class OrganizationsModel extends Model
@@ -30,3 +30,4 @@ class OrganizationsModel extends Model
     ];
 
 }
+

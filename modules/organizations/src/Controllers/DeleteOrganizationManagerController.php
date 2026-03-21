@@ -1,12 +1,12 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Controllers;
+namespace Percontmx\SportsVibe\Organizations\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\Events\Events;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\ResponseInterface;
-use Percontmx\SportsCloud\Organizations\Services\OrganizationsService;
+use Percontmx\SportsVibe\Organizations\Services\OrganizationsService;
 
 class DeleteOrganizationManagerController extends BaseController
 {
@@ -43,3 +43,4 @@ class DeleteOrganizationManagerController extends BaseController
             ->to("/organizations/{$organizationId}");
     }
 }
+

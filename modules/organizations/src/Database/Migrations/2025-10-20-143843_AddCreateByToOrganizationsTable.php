@@ -1,6 +1,6 @@
 <?php
 
-namespace Percontmx\SportsCloud\Organizations\Database\Migrations;
+namespace Percontmx\SportsVibe\Organizations\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -26,3 +26,4 @@ class AddCreatedByToOrganizationsTable extends Migration
         }
     }
 }
+
